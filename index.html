@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(90deg, #7f00ff 0%, #e100ff 100%);
+            background: url('https://img.freepik.com/free-photo/blue-abstract-gradient-wave-wallpaper_53876-108364.jpg?w=996&t=st=1719297304~exp=1719297904~hmac=90856b5866cad27dee26a3f653520233ac12880f79e412be8d76367c46adaca1');
+            background-size: cover;
+            background-position: center;
+            color: white;
+        }
+
+        .login-container {
+            background: white;
+            color: #333;
+            border-radius: 10px;
+            display: flex;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 900px;
+            width: 100%;
+            margin: 20px;
+        }
+
+        .login-info {
+            background-image: url('loginpic.jpg');
+            background-size: cover;
+            background-position: center;
+            padding: 40px;
+            color: white;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .login-info h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .login-info p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .login-form {
+            padding: 40px;
+            flex: 1;
+        }
+
+        .login-form h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #333;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        .input-group input {
+            width: calc(100% - 20px);
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .input-group input:focus {
+            outline: none;
+            border-color: #7f00ff;
+        }
+
+        .login-form button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background: linear-gradient(90deg, #7f00ff 0%, #e100ff 100%);
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .login-form button:hover {
+            background: linear-gradient(90deg, #e100ff 0%, #7f00ff 100%);
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-info">
+            <h2>Welcome to the Shilp!</h2>
+            <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p> -->
+        </div>
+        <div class="login-form">
+            <h2>Login</h2>
+            <form action="login.php" method="POST">
+                <div class="input-group">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
