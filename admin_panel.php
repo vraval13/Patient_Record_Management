@@ -41,6 +41,25 @@ if (!isset($_SESSION['username'])) {
             height: auto;
             border-radius: 10px;
         }
+
+        .footer {
+            background-color: #222;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
@@ -117,6 +136,9 @@ if (!isset($_SESSION['username'])) {
                 <button type="submit" name="print" formaction="print_findings.php">Generate Print Format</button>
             </form>
         </div>
+    </div>
+    <div class="footer">
+        © 2024 Created with ♥ By <a href="https://www.instagram.com/cool_guy_0304/" target="__blank">Vyom Raval</a> | Terms & conditions
     </div>
 </body>
 </html>
