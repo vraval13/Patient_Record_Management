@@ -6,10 +6,7 @@ Welcome to the Patient Record Management System! This robust and efficient appli
 
 - [Features](#features)
 - [Installation](#installation)
-- [Configuration](#configuration)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
+- Will update more soon...
 
 ## Features
 
