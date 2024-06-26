@@ -6,6 +6,7 @@ Welcome to the Patient Record Management System! This robust and efficient appli
 
 - [Features](#features)
 - [Installation](#installation)
+- [Screenshots](#screenshots)
 - Will update more soon...
 
 ## Features
@@ -64,7 +65,6 @@ Welcome to the Patient Record Management System! This robust and efficient appli
     DB_USERNAME=your_username
     DB_PASSWORD=your_password
     ```
-
 6. **Start the Server**
 
     Ensure your web server is configured to serve the application. For development, you can use PHP's built-in server:
@@ -72,3 +72,12 @@ Welcome to the Patient Record Management System! This robust and efficient appli
     ```bash
     php -S localhost:8000
     ```
+
+## Screenshots
+
+### Initial Window :-
+![image](https://github.com/vraval13/Patient_Record_Management/assets/125266587/676b168d-2e89-455d-a10b-ce9236215f3a)
+
+### Admin Panel :-
+![image](https://github.com/vraval13/Patient_Record_Management/assets/125266587/2516d098-ca3b-47f5-88b1-1a63faafc2b1)
+
