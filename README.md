@@ -81,3 +81,5 @@ Welcome to the Patient Record Management System! This robust and efficient appli
 ### Admin Panel :-
 ![image](https://github.com/vraval13/Patient_Record_Management/assets/125266587/2516d098-ca3b-47f5-88b1-1a63faafc2b1)
 
+### Dashboard :-
+![image](https://github.com/vraval13/Patient_Record_Management/assets/125266587/0d9327e8-0717-4924-b802-63ad54b3dc7e)
