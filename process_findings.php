@@ -19,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $medication = $_POST['medication'];
     $provider = $_POST['provider'];  // Assuming this is the doctor's name or ID
 
-    // Insert data into database (example assuming MySQL)
+    // Database credentials
     $servername = "localhost";
     $username = "app_user";
     $password = "abcde";
@@ -33,14 +33,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         die("Connection failed: " . $conn->connect_error);
     }
 
-    // SQL to insert data into patient records table
-    $sql = "INSERT INTO patientrecords (case_number, date, chief_complaint, physical_examination, history, diagnosis, vital_signs, medication, provider)
-            VALUES ('$case_number', '$date', '$chief_complaint', '$physical_examination', '$history', '$diagnosis', '$vital_signs', '$medication', '$provider')";
+    // Check if the case number already exists
+    $check_query = "SELECT * FROM patientrecords WHERE case_number = '$case_number'";
+    $result = $conn->query($check_query);
 
-    if ($conn->query($sql) === TRUE) {
-        echo "New record created successfully";
+    if ($result->num_rows > 0) {
+        echo "Error: Case number already exists. Please use a unique case number.";
     } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
+        // SQL to insert data into patient records table
+        $sql = "INSERT INTO patientrecords (case_number, date, chief_complaint, physical_examination, history, diagnosis, vital_signs, medication, provider)
+                VALUES ('$case_number', '$date', '$chief_complaint', '$physical_examination', '$history', '$diagnosis', '$vital_signs', '$medication', '$provider')";
+
+        if ($conn->query($sql) === TRUE) {
+            echo "New record created successfully";
+        } else {
+            echo "Error: " . $sql . "<br>" . $conn->error;
+        }
     }
 
     $conn->close();
